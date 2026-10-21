@@ -1,5 +1,5 @@
 import {defineField, defineType} from 'sanity'
-import { translationField } from '../shared/translations'
+import {translationField} from '../shared/translations'
 
 export const postType = defineType({
   name: 'post',
@@ -16,5 +16,6 @@ export const postType = defineType({
       type: 'seo',
       title: 'SEO & Social',
     }),
+    // Content Fields
   ],
 })

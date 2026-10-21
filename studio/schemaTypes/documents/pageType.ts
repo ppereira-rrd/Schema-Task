@@ -16,5 +16,6 @@ export const pageType = defineType({
       type: 'seo',
       title: 'SEO & Social',
     }),
+    // Content Fields
   ],
 })

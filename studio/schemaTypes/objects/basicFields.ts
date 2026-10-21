@@ -22,6 +22,7 @@ export const basicSchemaFields = defineType({
       initialValue: () => new Date().toISOString(),
       validation: (rule) => rule.required(),
     }),
+    // Author Field needs to be added
   ],
   preview: {
     select: {
