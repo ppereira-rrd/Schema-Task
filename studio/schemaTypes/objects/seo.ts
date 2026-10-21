@@ -6,27 +6,32 @@ export const seoFields = defineType({
   type: 'object',
   fields: [
     defineField({
-      name: 'meta title',
+      name: 'metaTitle',
+      title: 'meta title',
       type: 'string',
       //   validation: (rule) => rule.required(),
     }),
     defineField({
-      name: 'meta description',
+      name: 'metaDescription',
+      title: 'meta description',
       type: 'string',
       //   validation: (rule) => rule.required(),
     }),
     defineField({
       name: 'exercpt',
+      title: "exercpt",
       type: 'string',
       //   validation: (rule) => rule.required(),
     }),
     defineField({
-      name: 'featured image',
+      name: 'featuredImage',
+      title: 'featured image',
       type: 'image',
       //   validation: (rule) => rule.required(),
     }),
     defineField({
-      name: 'SEO Schema',
+      name: 'seoSchema',
+      title: 'SEO Schema',
       type: 'string',
       //   validation: (rule) => rule.required(),
     }),
