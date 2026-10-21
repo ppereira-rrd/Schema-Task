@@ -3,7 +3,7 @@ import { translationField } from '../shared/translations'
 
 // This doesnt need SEO, this is to be used on other pages not a page in itself, like a storage container.
 export const testimonialType = defineType({
-  name: 'testimonial',
+  name: 'testimonials',
   title: 'Testimonials',
   type: 'document',
   fields: [

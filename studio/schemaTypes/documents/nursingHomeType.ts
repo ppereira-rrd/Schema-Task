@@ -2,7 +2,6 @@ import {defineField, defineType} from 'sanity'
 import { translationField } from '../shared/translations'
 
 // This doesnt need SEO, this is to be used on other pages not a page in itself, like a storage container.
-
 export const nursingHomeType = defineType({
   name: 'nursingHome',
   title: 'Nursing Home Information',
