@@ -14,6 +14,7 @@ export const supportedLanguages = [
   {id: 'es', title: 'Spanish'},
 ]
 
+// For sanity config - list of all translated types
 export const translatedTypes = [
   'post',
   'page',
