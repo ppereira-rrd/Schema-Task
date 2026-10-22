@@ -15,6 +15,7 @@ export const urlValidator = (rule: UrlRule) =>
     scheme: ['http', 'https'],
   })
 
+  // https://performancedrivenwebsites.co.uk/blog/how-to-add-json-ld-structured-data-seo-astro/
 export const validateJson = (rule: TextRule) =>
   rule.required().custom((value) => {
     if (!value) return true
