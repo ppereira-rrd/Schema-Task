@@ -1,15 +1,6 @@
 // https://www.sanity.io/docs/developer-guides/managing-redirects-with-sanity
-import {defineType, defineField, type SlugRule} from 'sanity'
-
-// Shared validation for our redirect slugs
-const slugValidator = (rule: SlugRule) =>
-  rule.required().custom((value) => {
-    if (!value || !value.current) return "Can't be blank"
-    if (!value.current.startsWith('/')) {
-      return 'The path must start with a /'
-    }
-    return true
-  })
+import {defineType, defineField} from 'sanity'
+import {slugValidator} from '../../lib/validator'
 
 export const redirectType = defineType({
   name: 'redirect',
@@ -20,12 +11,12 @@ export const redirectType = defineType({
     defineField({
       name: 'source',
       type: 'slug',
-      validation: (rule) => slugValidator(rule),
+      validation: slugValidator,
     }),
     defineField({
       name: 'destination',
       type: 'slug',
-      validation: (rule) => slugValidator(rule),
+      validation: slugValidator,
     }),
     defineField({
       name: 'permanent',

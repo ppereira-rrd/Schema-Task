@@ -1,4 +1,5 @@
 import {defineField, defineType} from 'sanity'
+import {slugValidator} from '../../lib/validator'
 
 export const basicSchemaFields = defineType({
   name: 'basicSchemaFields',
@@ -14,7 +15,7 @@ export const basicSchemaFields = defineType({
       name: 'slug',
       type: 'slug',
       options: {source: 'title'},
-      validation: (rule) => rule.required(),
+      validation: slugValidator,
     }),
     defineField({
       name: 'publishedAt',
@@ -22,7 +23,7 @@ export const basicSchemaFields = defineType({
       initialValue: () => new Date().toISOString(),
       validation: (rule) => rule.required(),
     }),
-    // Author Field needs to be added
+    // Author Field needs to be added - needs to reference an author document
   ],
   preview: {
     select: {

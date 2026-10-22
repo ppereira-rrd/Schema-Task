@@ -1,5 +1,5 @@
 import {defineField, defineType} from 'sanity'
-import { translationField } from '../shared/translations'
+import {translationField} from '../shared/translations'
 
 export const attorneyType = defineType({
   name: 'attorney',
@@ -16,7 +16,41 @@ export const attorneyType = defineType({
       type: 'seo',
       title: 'SEO & Social',
     }),
-    // Content Fields
-        // Attorney name - position - phone - email - education - credentials
+    defineField({
+      name: 'attorneyName',
+      type: 'string',
+      title: 'Attorney Name',
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: 'attorneyPosition',
+      type: 'string',
+      title: 'Attorney Position',
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: 'attorneyPhone',
+      type: 'string',
+      title: 'Attorney Phone',
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: 'attorneyEmail',
+      type: 'string',
+      title: 'Attorney Email',
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: 'attorneyEducation',
+      title: 'Attorney Education',
+      type: 'array',
+      of: [{type: 'block'}],
+    }),
+    defineField({
+      name: 'attorneyCredentials',
+      title: 'Attorney Credentials',
+      type: 'array',
+      of: [{type: 'block'}],
+    }),
   ],
 })

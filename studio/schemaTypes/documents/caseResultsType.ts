@@ -13,7 +13,37 @@ export const caseResultsType = defineType({
       name: 'basicSchemaFields',
       type: 'basicSchemaFields',
     }),
-    // Content Fields
-        // Case type - amount - attorney(s) - description - desc snippet
+    defineField({
+      name: 'caseType',
+      type: 'string',
+      title: 'Case Type',
+      options: {
+        list: [
+          {title: 'Car', value: 'car'},
+          {title: 'Bicycle', value: 'bicycle'},
+          {title: 'Truck', value: 'truck'},
+        ],
+      },
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: 'amount',
+      type: 'number',
+      title: 'Amount',
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: 'caseDesc',
+      type: 'text',
+      title: 'Full Description',
+      rows: 5,
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: 'caseSnippetDesc',
+      type: 'string',
+      title: 'Snippet Description',
+      validation: (rule) => rule.required(),
+    }),
   ],
 })

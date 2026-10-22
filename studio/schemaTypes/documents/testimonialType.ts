@@ -12,7 +12,17 @@ export const testimonialType = defineType({
       name: 'basicSchemaFields',
       type: 'basicSchemaFields',
     }),
-    // Content Fields
-        // Name - testimonial 
+    defineField({
+      name: 'testimonialName',
+      type: 'string',
+      title: 'Testimonial Name',
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: 'testimonialText',
+      type: 'string',
+      title: 'Testimonial Text',
+      validation: (rule) => rule.required(),
+    }),
   ],
 })
