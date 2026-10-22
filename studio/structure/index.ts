@@ -3,8 +3,8 @@ import type {StructureResolver} from 'sanity/structure'
 // https://www.sanity.io/docs/studio/structure-builder-cheat-sheet
 // https://www.sanity.io/docs/studio/structure-tool
 
-const contentTypes = ['page', 'post', 'videos', 'attorney']
-const storageTypes = ['nursingHome', 'officeLocations', 'inTheMedia', 'caseResults', 'testimonials']
+const contentTypes = ['page', 'post', 'videos', 'attorney', 'category']
+const storageTypes = ['nursingHome', 'officeLocations', 'inTheMedia', 'caseResults', 'testimonials', 'author']
 
 export const structure: StructureResolver = (S) =>
   S.list()

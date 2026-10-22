@@ -52,5 +52,6 @@ export const attorneyType = defineType({
       type: 'array',
       of: [{type: 'block'}],
     }),
+    // Content
   ],
 })

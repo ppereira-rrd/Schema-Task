@@ -9,6 +9,8 @@ import {testimonialType} from './testimonialType'
 import {redirectType} from './redirects'
 import {videoType} from './videoType'
 import { siteSettingsType } from './siteSettingsType'
+import { authorType } from './authorType'
+import { categoryType } from './categoryType'
 
 export const documentSchemas = [
   postType,
@@ -21,5 +23,7 @@ export const documentSchemas = [
   testimonialType,
   redirectType,
   videoType,
-  siteSettingsType
+  siteSettingsType,
+  authorType,
+  categoryType
 ]

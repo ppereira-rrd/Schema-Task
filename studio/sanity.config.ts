@@ -3,8 +3,8 @@ import {structureTool} from 'sanity/structure'
 import {visionTool} from '@sanity/vision'
 import {schemaTypes} from './schemaTypes'
 import {documentInternationalization} from '@sanity/document-internationalization'
-import { translatedTypes, supportedLanguages } from './schemaTypes/shared/translations'
-import {structure} from './structure/index';
+import {translatedTypes, supportedLanguages} from './schemaTypes/shared/translations'
+import {structure} from './structure/index'
 
 export default defineConfig({
   name: 'Studio',
@@ -12,6 +12,7 @@ export default defineConfig({
   projectId: 'm5ne9q48',
   dataset: 'production',
 
+  // Allows for content releases
   releases: {
     enabled: true,
   },
@@ -28,6 +29,12 @@ export default defineConfig({
   schema: {
     types: schemaTypes,
   },
-  // Add filter below so the only options for documents are language specific
-  document: {}
+  document: {
+    // https://www.sanity.io/docs/content-lake/drafts-and-versions#k6b73ab68807e
+    drafts: {
+      // Allows drafts for pages
+      enabled: true,
+    },
+    // Add filter below so the only options for documents are language specific
+  },
 })
