@@ -6,6 +6,8 @@ import type {StructureResolver} from 'sanity/structure'
 const contentTypes = ['page', 'post', 'videos', 'attorney', 'category']
 const storageTypes = ['nursingHome', 'officeLocations', 'inTheMedia', 'caseResults', 'testimonials', 'author']
 
+// .filter('_type == "lesson" && language == "en"'),
+// Filter above will show language specific
 export const structure: StructureResolver = (S) =>
   S.list()
     .title('Lanzone')
