@@ -20,6 +20,10 @@ These will be documents in sanity to store info and be referenced on pages:
 - Nursing Home Info (For the custom map)
 - In The Media
 - CTA
+- Category
+- Author
+- Redirect 
+- Site Settings
 
 #### Schema Objects
 Schema "objects" shared between other schema. These are common fields like heading, url, meta descriptions, meta title, all seo fields, etc...
