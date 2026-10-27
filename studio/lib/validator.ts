@@ -16,6 +16,7 @@ export const urlValidator = (rule: UrlRule) =>
   })
 
 // https://performancedrivenwebsites.co.uk/blog/how-to-add-json-ld-structured-data-seo-astro/
+// http://freecodecamp.org/news/nextjs-json-ld-structured-data/#heading-how-to-validate-json-ld-automatically-after-every-build
 export const validateJson = (rule: TextRule) =>
   rule.required().custom((value) => {
     if (!value) return true
