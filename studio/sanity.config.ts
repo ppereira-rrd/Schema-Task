@@ -20,6 +20,12 @@ export default defineConfig({
     enabled: true,
   },
 
+  // Enables Media Library for Dashboard
+  // https://www.sanity.io/docs/media-library/configure-library
+  mediaLibrary: {
+    enabled: true,
+  },
+
   plugins: [
     structureTool({structure}),
     visionTool(),
