@@ -7,6 +7,13 @@ export const seoFields = defineType({
   title: 'SEO',
   type: 'object',
   fields: [
+    // https://www.sanity.io/answers/best-approach-for-parent-child-relationships-and-slugs-in-sanity-io
+    defineField({
+      name: 'parentPage',
+      type: 'reference',
+      to: [{type: 'page'}],
+      group: 'content',
+    }),
     defineField({
       name: 'metaTitle',
       title: 'Meta Title',
