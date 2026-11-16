@@ -1,5 +1,6 @@
 import {defineField, defineType} from 'sanity'
 import {translationField} from '../shared/translations'
+import { content } from '../objects'
 
 export const attorneyType = defineType({
   name: 'attorney',
@@ -53,5 +54,12 @@ export const attorneyType = defineType({
       of: [{type: 'block'}],
     }),
     // Content
+    // Content Fields
+    defineField({
+      name: 'sections',
+      type: 'array',
+      title: 'Page Sections',
+      of: [...content.map((content) => content)],
+    }),
   ],
 })

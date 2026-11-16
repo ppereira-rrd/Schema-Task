@@ -4,7 +4,14 @@ import type {StructureResolver} from 'sanity/structure'
 // https://www.sanity.io/docs/studio/structure-tool
 
 const contentTypes = ['page', 'post', 'videos', 'attorney', 'category']
-const storageTypes = ['nursingHome', 'officeLocations', 'inTheMedia', 'caseResults', 'testimonials', 'author']
+const storageTypes = [
+  'nursingHome',
+  'officeLocations',
+  'inTheMedia',
+  'caseResults',
+  'testimonials',
+  'author',
+]
 
 // .filter('_type == "lesson" && language == "en"'),
 // Filter above will show language specific
@@ -33,7 +40,7 @@ export const structure: StructureResolver = (S) =>
       S.divider(),
       S.listItem()
         .title('Settings')
-        .id('website-structure-settings')
+        .id('siteSettings')
         .child(
           S.list()
             .id('website-structure-settings-child')
@@ -41,7 +48,7 @@ export const structure: StructureResolver = (S) =>
               S.listItem()
                 .title('Site Settings')
                 .id('siteSettings')
-                .child(S.document().schemaType('siteSettings').documentId('siteSettings')),
+                .child(S.document().schemaType('siteSettings').documentId('siteSettings'),),
               S.divider(),
               S.documentTypeListItem('redirect').title('Redirects'),
             ]),

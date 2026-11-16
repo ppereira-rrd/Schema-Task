@@ -9,6 +9,12 @@ import {structure} from './structure/index'
 // More actions for document like dupping below
 // https://www.sanity.io/docs/studio/document-actions
 
+// https://www.sanity.io/guides/singleton-document
+// Define the actions that should be available for singleton documents
+// const singletonActions = new Set(["publish", "discardChanges", "restore"])
+// Define the singleton document types
+const singletonTypes = new Set(['siteSettings'])
+
 export default defineConfig({
   name: 'Studio',
   title: 'Schema-Task',
@@ -42,6 +48,8 @@ export default defineConfig({
 
   schema: {
     types: schemaTypes,
+    // Filter out singleton types from the global “New document” menu options
+    templates: (templates) => templates.filter(({schemaType}) => !singletonTypes.has(schemaType)),
   },
 
   document: {
@@ -57,6 +65,14 @@ export default defineConfig({
     //   return prev.filter((templateItem) =>
     //       !translatedTypes.includes(templateItem.templateId),
     //     )
+    // },
+
+    // For singleton types, filter out actions that are not explicitly included
+    // in the `singletonActions` list defined above
+    // actions: (input, context) =>
+    //   singletonTypes.has(context.schemaType)
+    //     ? input.filter(({ action }) => action && singletonActions.has(action))
+    //     : input,
     // },
   },
 })

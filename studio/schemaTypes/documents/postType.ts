@@ -1,5 +1,6 @@
 import {defineField, defineType} from 'sanity'
 import {translationField} from '../shared/translations'
+import {content} from '../objects'
 
 export const postType = defineType({
   name: 'post',
@@ -17,5 +18,11 @@ export const postType = defineType({
       title: 'SEO & Social',
     }),
     // Content Fields
+    defineField({
+      name: 'sections',
+      type: 'array',
+      title: 'Post Sections',
+      of: [...content.map((content) => content)],
+    }),
   ],
 })

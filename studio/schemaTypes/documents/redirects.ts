@@ -1,7 +1,7 @@
-// https://www.sanity.io/docs/developer-guides/managing-redirects-with-sanity
 import {defineType, defineField} from 'sanity'
 import {slugValidator} from '../../lib/validator'
 
+// https://www.sanity.io/docs/developer-guides/managing-redirects-with-sanity
 export const redirectType = defineType({
   name: 'redirect',
   title: 'Redirect',

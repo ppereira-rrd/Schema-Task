@@ -1,5 +1,6 @@
 import {defineField, defineType} from 'sanity'
-import { translationField } from '../shared/translations'
+import {translationField} from '../shared/translations'
+import { content } from '../objects'
 
 export const pageType = defineType({
   name: 'page',
@@ -17,5 +18,11 @@ export const pageType = defineType({
       title: 'SEO & Social',
     }),
     // Content Fields
+     defineField({
+      name: 'sections',
+      type: 'array',
+      title: 'Page Sections',
+      of: [...content.map((content) => content)],
+    }),
   ],
 })
