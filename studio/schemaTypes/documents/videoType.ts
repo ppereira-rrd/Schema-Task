@@ -17,7 +17,6 @@ export const videoType = defineType({
       type: 'seo',
       title: 'SEO & Social',
     }),
-    // In astro you can set what to grab from the choosen attorney(name,image,position)
     defineField({
       name: 'attorney',
       title: 'Featured Attorney',

@@ -12,7 +12,6 @@ export const seoFields = defineType({
       name: 'parentPage',
       type: 'reference',
       to: [{type: 'page'}],
-      // group: 'content',
     }),
     defineField({
       name: 'metaTitle',

@@ -1,7 +1,6 @@
 import {defineField, defineType, defineArrayMember} from 'sanity'
 import {translationField} from '../shared/translations'
 
-// Singleton template meaning only 1 per language
 export const siteSettingsType = defineType({
   name: 'siteSettings',
   title: 'Site Settings',
@@ -19,7 +18,6 @@ export const siteSettingsType = defineType({
       type: 'image',
       options: {hotspot: true},
     }),
-    // Need to format properly
     defineField({
       name: 'seo',
       type: 'seo',
@@ -42,7 +40,6 @@ export const siteSettingsType = defineType({
         }),
       ],
     }),
-    // Site settings like site name - default meta title and desc, etc...
   ],
   preview: {
     select: {title: 'siteName'},

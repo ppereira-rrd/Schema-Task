@@ -12,7 +12,6 @@ export const translationField = defineField({
 export const supportedLanguages = [
   {id: 'en', title: 'English'},
   {id: 'es', title: 'Spanish'},
-  {id: 'pt', title: 'Portuguese'},
 ]
 
 // For sanity config - list of all translated types

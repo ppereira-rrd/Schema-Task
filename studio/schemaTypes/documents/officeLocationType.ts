@@ -1,5 +1,5 @@
 import {defineField, defineType} from 'sanity'
-import {translationField} from '../shared/translations'
+// import {translationField} from '../shared/translations'
 import {urlValidator} from '../../lib/validator'
 
 // This doesnt need SEO, this is to be used on other pages not a page in itself, like a storage container.

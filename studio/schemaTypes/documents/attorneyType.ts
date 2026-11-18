@@ -53,7 +53,6 @@ export const attorneyType = defineType({
       type: 'array',
       of: [{type: 'block'}],
     }),
-    // Content
     // Content Fields
     defineField({
       name: 'sections',

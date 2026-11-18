@@ -1,5 +1,5 @@
 import {defineField, defineType} from 'sanity'
-import {translationField} from '../shared/translations'
+// import {translationField} from '../shared/translations'
 
 export const authorType = defineType({
   name: 'author',

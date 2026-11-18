@@ -22,7 +22,8 @@ export const validateJson = (rule: TextRule) =>
     if (!value) return true
     try {
       // Validate the JSON-LD
-      // JSON.parse(value)
+      // Will throw an error if its invalid JSON BUT doesn't validate the SEO Schema
+      JSON.parse(value)
       return true
     } catch (err) {
       return `Invalid JSON: ${(err as Error).message}`
